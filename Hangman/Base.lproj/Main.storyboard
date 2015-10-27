@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-oi-QZ2">
+                                <rect key="frame" x="505" y="28" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="KNd-ad-whT"/>
+                                    <constraint firstAttribute="height" constant="30" id="n2c-Q0-uhY"/>
+                                    <constraint firstAttribute="width" constant="75" id="r9R-V3-Dl0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="xQ4-Ml-Iaf"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-iL-gGP">
+                                <rect key="frame" x="273" y="541" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fSH-X2-9N7"/>
+                                    <constraint firstAttribute="width" constant="54" id="sMZ-wn-Ohf"/>
+                                </constraints>
+                                <state key="normal" title="GUESS!"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess Letters Here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bJ-am-1oD">
+                                <rect key="frame" x="133" y="492" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0JR-9c-0Q8"/>
+                                    <constraint firstAttribute="width" constant="334" id="CX1-Zj-KVV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kuz-Of-x7u">
+                                <rect key="frame" x="58" y="110" width="485" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="485" id="3Ke-25-cWZ"/>
+                                    <constraint firstAttribute="height" constant="327" id="4hk-Xc-iye"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="327" id="J9C-cC-fZo"/>
+                                    <constraint firstAttribute="width" secondItem="Kuz-Of-x7u" secondAttribute="height" multiplier="485:327" id="WWc-I1-w8b"/>
+                                    <constraint firstAttribute="width" constant="485" id="chZ-cR-mav"/>
+                                    <constraint firstAttribute="width" secondItem="Kuz-Of-x7u" secondAttribute="height" multiplier="485:327" id="zwi-WT-Z5x"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-9r-LzI">
+                                <rect key="frame" x="133" y="59" width="334" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="oBp-aD-i4j"/>
+                                    <constraint firstAttribute="height" constant="21" id="xng-ed-zhz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="knownString" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djg-PO-cI0">
+                                <rect key="frame" x="252" y="457" width="96" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bWh-qt-Sdn"/>
+                                    <constraint firstAttribute="width" constant="96" id="if0-lw-ZDX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="guess" destination="lLw-iL-gGP" id="6S4-l7-ZlY"/>
+                        <outlet property="guessUser" destination="7bJ-am-1oD" id="ZlL-TS-OqZ"/>
+                        <outlet property="hangmanPicture" destination="Kuz-Of-x7u" id="Tjv-RS-VfX"/>
+                        <outlet property="knownString" destination="djg-PO-cI0" id="m80-X8-tSl"/>
+                        <outlet property="newGame" destination="KCr-oi-QZ2" id="IsK-PO-Zui"/>
+                        <outlet property="previousGuesses" destination="H8A-9r-LzI" id="AcB-a7-D87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="294"/>
+        </scene>
+    </scenes>
+</document>
